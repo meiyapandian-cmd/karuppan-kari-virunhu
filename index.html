@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Karuppan Kari Virunthu | Pannapalayam, Palladam</title>
+
+    <meta name="description"
+        content="Karuppan Kari Virunthu is a traditional South Indian non-vegetarian hotel in Pannapalayam, Palladam. Enjoy Nattukozhi Varutha Kari, Mutton Chukka, Biryani and authentic regional flavours.">
+
+    <meta name="keywords"
+        content="Karuppan Kari Virunthu, Pannapalayam hotel, Palladam non veg hotel, Nattukozhi Varutha Kari, Mutton Chukka, Biryani">
+
+    <meta name="theme-color" content="#111111">
+
+    <style>
+
+        /* =====================================================
+           KARUPPAN KARI VIRUNTHU
+           SIMPLE EDITABLE RESTAURANT WEBSITE
+        ====================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #111111;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(17, 17, 17, 0.97);
+            border-bottom: 1px solid #333333;
+        }
+
+        .navbar {
+            max-width: 1150px;
+            margin: auto;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #f5b041;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #ffffff;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: #f5b041;
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 20px;
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.68),
+                    rgba(0, 0, 0, 0.88)
+                ),
+                url("https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 8vw, 76px);
+            line-height: 1.1;
+            color: #f5b041;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero h2 {
+            font-size: clamp(20px, 4vw, 32px);
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            color: #dddddd;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        .hero-location {
+            color: #f5b041;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 22px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .btn-primary {
+            background: #f5b041;
+            color: #111111;
+        }
+
+        .btn-secondary {
+            border: 1px solid #f5b041;
+            color: #f5b041;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================== */
+
+        section {
+            padding: 75px 20px;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 42px;
+        }
+
+        .section-title h2 {
+            color: #f5b041;
+            font-size: 34px;
+            margin-bottom: 8px;
+        }
+
+        .section-title p {
+            color: #aaaaaa;
+        }
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about {
+            background: #181818;
+        }
+
+        .about-content {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            color: #cccccc;
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            color: #f5b041;
+            font-weight: bold;
+        }
+
+        /* =========================
+           SPECIALITY DISHES
+        ========================== */
+
+        .menu {
+            background: #111111;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 22px;
+        }
+
+        .menu-card {
+            background: #1c1c1c;
+            border: 1px solid #333333;
+            border-radius: 12px;
+            padding: 25px;
+            transition: 0.2s;
+        }
+
+        .menu-card:hover {
+            border-color: #f5b041;
+            transform: translateY(-3px);
+        }
+
+        .menu-card h3 {
+            color: #f5b041;
+            margin-bottom: 10px;
+            font-size: 21px;
+        }
+
+        .menu-card p {
+            color: #aaaaaa;
+            font-size: 15px;
+        }
+
+        .menu-card .dish-icon {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        /* =========================
+           AMENITIES
+        ========================== */
+
+        .amenities {
+            background: #181818;
+        }
+
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .amenity-card {
+            background: #222222;
+            border: 1px solid #333333;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .amenity-card .icon {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        .amenity-card h3 {
+            color: #f5b041;
+            margin-bottom: 8px;
+        }
+
+        .amenity-card p {
+            color: #bbbbbb;
+            font-size: 14px;
+        }
+
+        /* =========================
+           OPENING HOURS
+        ========================== */
+
+        .hours {
+            background: #111111;
+        }
+
+        .hours-box {
+            max-width: 650px;
+            margin: auto;
+            background: #1c1c1c;
+            border: 1px solid #333333;
+            border-radius: 14px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .hours-box h3 {
+            color: #f5b041;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .hours-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 12px 0;
+            border-bottom: 1px solid #333333;
+        }
+
+        .hours-row:last-child {
+            border-bottom: none;
+        }
+
+        .hours-row span:first-child {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .hours-row span:last-child {
+            color: #cccccc;
+        }
+
+        .closed {
+            color: #ff7777 !important;
+        }
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact {
+            background: #181818;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .contact-card {
+            background: #222222;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid #333333;
+        }
+
+        .contact-card .icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .contact-card h3 {
+            color: #f5b041;
+            margin-bottom: 10px;
+        }
+
+        .contact-card p {
+            color: #bbbbbb;
+            font-size: 14px;
+        }
+
+        .contact-card a:hover {
+            color: #f5b041;
+        }
+
+        .address {
+            line-height: 1.8;
+        }
+
+        /* =========================
+           MAP
+        ========================== */
+
+        .map-section {
+            background: #111111;
+            text-align: center;
+        }
+
+        .map-section p {
+            color: #bbbbbb;
+            margin-bottom: 25px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #080808;
+            border-top: 1px solid #333333;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        footer h3 {
+            color: #f5b041;
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            color: #888888;
+            font-size: 13px;
+        }
+
+        /* =========================
+           MOBILE BOTTOM BUTTONS
+        ========================== */
+
+        .mobile-actions {
+            display: none;
+        }
+
+        /* =========================
+           MOBILE RESPONSIVE
+        ========================== */
+
+        @media (max-width: 700px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 14px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .hero {
+                min-height: 80vh;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            section {
+                padding: 55px 15px;
+            }
+
+            .section-title h2 {
+                font-size: 29px;
+            }
+
+            .hours-row {
+                font-size: 14px;
+            }
+
+            .mobile-actions {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 2000;
+
+                display: flex;
+
+                background: #0b0b0b;
+                border-top: 1px solid #333333;
+            }
+
+            .mobile-actions a {
+                flex: 1;
+                text-align: center;
+                padding: 13px 5px;
+                font-size: 13px;
+                font-weight: bold;
+            }
+
+            .call {
+                color: #ffffff;
+            }
+
+            .whatsapp {
+                color: #5ee27a;
+            }
+
+            .directions {
+                color: #f5b041;
+            }
+
+            footer {
+                padding-bottom: 85px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+====================================================== -->
+
+<header>
+
+    <div class="navbar">
+
+        <div class="logo">
+            KARUPPAN KARI VIRUNTHU
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Specialities</a>
+            <a href="#hours">Hours</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO / HOME
+====================================================== -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="hero-location">
+            📍 Pannapalayam, Palladam
+        </div>
+
+        <h1>
+            KARUPPAN<br>
+            KARI VIRUNTHU
+        </h1>
+
+        <h2>
+            Authentic South Indian Non-Vegetarian Cuisine
+        </h2>
+
+        <p>
+            Traditional flavours, delicious regional dishes
+            and a memorable dining experience.
+        </p>
+
+        <div class="buttons">
+
+            <!-- PHONE NUMBER -->
+
+            <a class="btn btn-primary"
+               href="tel:+919500127072">
+
+                📞 Call Now
+
+            </a>
+
+
+            <!-- WHATSAPP -->
+
+            <a class="btn btn-secondary"
+               href="https://wa.me/919500127072"
+               target="_blank"
+               rel="noopener">
+
+                💬 WhatsApp
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT US
+====================================================== -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>About Us</h2>
+
+            <p>
+                Welcome to Karuppan Kari Virunthu
+            </p>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <p>
+                <span class="highlight">
+                    Karuppan Kari Virunthu
+                </span>
+                is a traditional South Indian
+                non-vegetarian hotel located in
+                <span class="highlight">
+                    Pannapalayam, Palladam
+                </span>.
+            </p>
+
+            <p>
+                We are known for serving authentic,
+                flavourful regional dishes prepared
+                with traditional South Indian flavours.
+            </p>
+
+            <p>
+                Come and enjoy delicious food with
+                family and friends.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SPECIALITY DISHES
+====================================================== -->
+
+<section class="menu" id="menu">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Our Specialities</h2>
+
+            <p>
+                Traditional dishes full of authentic flavour
+            </p>
+
+        </div>
+
+
+        <div class="menu-grid">
+
+
+            <!-- DISH 1 -->
+
+            <div class="menu-card">
+
+                <div class="dish-icon">
+                    🍗
+                </div>
+
+                <h3>
+                    Nattukozhi Varutha Kari
+                </h3>
+
+                <p>
+                    Traditional country chicken fry
+                    prepared with delicious regional
+                    spices and authentic South Indian flavour.
+                </p>
+
+            </div>
+
+
+            <!-- DISH 2 -->
+
+            <div class="menu-card">
+
+                <div class="dish-icon">
+                    🥘
+                </div>
+
+                <h3>
+                    Mutton Chukka
+                </h3>
+
+                <p>
+                    A flavourful traditional mutton dish
+                    prepared with aromatic spices
+                    and rich South Indian taste.
+                </p>
+
+            </div>
+
+
+            <!-- DISH 3 -->
+
+            <div class="menu-card">
+
+                <div class="dish-icon">
+                    🍛
+                </div>
+
+                <h3>
+                    Biryani
+                </h3>
+
+                <p>
+                    Aromatic and delicious biryani
+                    prepared with carefully selected
+                    spices and traditional flavours.
+                </p>
+
+            </div>
+
+
+            <!-- ADDITIONAL DISH -->
+
+            <div class="menu-card">
+
+                <div class="dish-icon">
+                    🍖
+                </div>
+
+                <h3>
+                    Traditional Kari Varieties
+                </h3>
+
+                <p>
+                    Explore our selection of authentic
+                    South Indian non-vegetarian dishes.
+                    Ask our team about today's menu.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     AMENITIES
+====================================================== -->
+
+<section class="amenities">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Our Facilities</h2>
+
+            <p>
+                Comfortable dining for everyone
+            </p>
+
+        </div>
+
+
+        <div class="amenities-grid">
+
+
+            <!-- PARKING -->
+
+            <div class="amenity-card">
+
+                <div class="icon">
+                    🅿️
+                </div>
+
+                <h3>
+                    On-Site Parking
+                </h3>
+
+                <p>
+                    Parking spaces are available
+                    for our customers.
+                </p>
+
+            </div>
+
+
+            <!-- KIDS MENU -->
+
+            <div class="amenity-card">
+
+                <div class="icon">
+                    👨‍👩‍👧‍👦
+                </div>
+
+                <h3>
+                    Kids' Menu
+                </h3>
+
+                <p>
+                    Family-friendly dining with
+                    options for children.
+                </p>
+
+            </div>
+
+
+            <!-- FAMILY DINING -->
+
+            <div class="amenity-card">
+
+                <div class="icon">
+                    🍽️
+                </div>
+
+                <h3>
+                    Family Dining
+                </h3>
+
+                <p>
+                    Enjoy traditional food with
+                    your family and friends.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     OPENING HOURS
+====================================================== -->
+
+<section class="hours" id="hours">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Opening Hours</h2>
+
+            <p>
+                Plan your visit
+            </p>
+
+        </div>
+
+
+        <div class="hours-box">
+
+            <h3>
+                🕐 Restaurant Timings
+            </h3>
+
+
+            <div class="hours-row">
+
+                <span>
+                    Monday
+                </span>
+
+                <span>
+                    6:30 AM – 12:00 AM
+                </span>
+
+            </div>
+
+
+            <div class="hours-row">
+
+                <span>
+                    Tuesday
+                </span>
+
+                <span>
+                    6:30 AM – 12:00 AM
+                </span>
+
+            </div>
+
+
+            <div class="hours-row">
+
+                <span>
+                    Wednesday
+                </span>
+
+                <span>
+                    6:30 AM – 12:00 AM
+                </span>
+
+            </div>
+
+
+            <div class="hours-row">
+
+                <span>
+                    Thursday
+                </span>
+
+                <span>
+                    6:30 AM – 12:00 AM
+                </span>
+
+            </div>
+
+
+            <div class="hours-row">
+
+                <span>
+                    Friday
+                </span>
+
+                <span>
+                    6:30 AM – 12:00 AM
+                </span>
+
+            </div>
+
+
+            <div class="hours-row">
+
+                <span>
+                    Saturday
+                </span>
+
+                <span>
+                    6:30 AM – 12:00 AM
+                </span>
+
+            </div>
+
+
+            <div class="hours-row">
+
+                <span>
+                    Sunday
+                </span>
+
+                <span class="closed">
+                    Closed
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT
+====================================================== -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Contact Us</h2>
+
+            <p>
+                We look forward to serving you
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <!-- PHONE -->
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    📞
+                </div>
+
+                <h3>
+                    Call Us
+                </h3>
+
+                <p>
+
+                    <a href="tel:+919500127072">
+
+                        +91 95001 27072
+
+                    </a>
+
+                </p>
+
+            </div>
+
+
+            <!-- WHATSAPP -->
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    💬
+                </div>
+
+                <h3>
+                    WhatsApp
+                </h3>
+
+                <p>
+
+                    <a href="https://wa.me/919500127072"
+                       target="_blank"
+                       rel="noopener">
+
+                        Chat with us
+
+                    </a>
+
+                </p>
+
+            </div>
+
+
+            <!-- ADDRESS -->
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    📍
+                </div>
+
+                <h3>
+                    Address
+                </h3>
+
+                <p class="address">
+
+                    91 C, Anna Nagar,<br>
+
+                    Coimbatore - Trichy Road,<br>
+
+                    Near Yamaha Showroom,<br>
+
+                    Pannapalayam, Palladam,<br>
+
+                    Tamil Nadu - 641664
+
+                </p>
+
+            </div>
+
+
+            <!-- HOURS -->
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    🕐
+                </div>
+
+                <h3>
+                    Opening Hours
+                </h3>
+
+                <p>
+
+                    Monday – Saturday<br>
+
+                    6:30 AM – 12:00 AM<br>
+
+                    <span class="closed">
+                        Sunday: Closed
+                    </span>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     GOOGLE MAPS
+====================================================== -->
+
+<section class="map-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Find Us</h2>
+
+            <p>
+                Visit Karuppan Kari Virunthu in Pannapalayam, Palladam.
+            </p>
+
+        </div>
+
+
+        <!-- EDIT THIS MAP LINK IF NEEDED -->
+
+        <a class="btn btn-primary"
+           href="https://www.google.com/maps/search/?api=1&query=Karuppan+Kari+Virunthu+Pannapalayam+Palladam"
+           target="_blank"
+           rel="noopener">
+
+            📍 Get Directions
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+    <h3>
+        KARUPPAN KARI VIRUNTHU
+    </h3>
+
+    <p>
+        Authentic South Indian Non-Vegetarian Cuisine
+    </p>
+
+    <br>
+
+    <p>
+        Pannapalayam, Palladam, Tamil Nadu
+    </p>
+
+    <br>
+
+    <p>
+        © 2026 Karuppan Kari Virunthu.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- =====================================================
+     MOBILE BOTTOM ACTION BUTTONS
+====================================================== -->
+
+<div class="mobile-actions">
+
+
+    <a class="call"
+       href="tel:+919500127072">
+
+        📞 Call
+
+    </a>
+
+
+    <a class="whatsapp"
+       href="https://wa.me/919500127072"
+       target="_blank"
+       rel="noopener">
+
+        💬 WhatsApp
+
+    </a>
+
+
+    <a class="directions"
+       href="https://www.google.com/maps/search/?api=1&query=Karuppan+Kari+Virunthu+Pannapalayam+Palladam"
+       target="_blank"
+       rel="noopener">
+
+        📍 Directions
+
+    </a>
+
+</div>
+
+
+</body>
+</html>
